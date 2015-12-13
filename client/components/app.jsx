@@ -51,7 +51,7 @@ App = React.createClass({
   // Render the page!
   render() {
     return (
-      <div className="content-area">
+      <div className="content">
         <div id="header">
           <h1>Forums</h1>
           <h2>Long-term Community Discussions</h2>
