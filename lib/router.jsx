@@ -4,3 +4,10 @@ FlowRouter.route('/', {
   },
   fastRender: true
 });
+
+FlowRouter.route('/login', {
+  action(params) {
+    ReactLayout.render(Login);
+  },
+  fastRender: true
+});
