@@ -11,7 +11,7 @@ Login = React.createClass({
   },
 
   getLogoutButton() {
-    return <a href='#' onClick={this.logout}></a>
+    return <a href='#' onClick={this.logout}>Logout</a>
   },
 
   render() {

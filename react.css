@@ -19,19 +19,19 @@ body {
 }
 .navbar::before {
   position:absolute;
-  left:-50px;
+  left:-60px;
   top:0px;
   content:'';
   border-top: 50px solid #fff;
-  border-left: 50px solid transparent;
+  border-left: 60px solid transparent;
 }
 .navbar::after {
   position:absolute;
-  right:-50px;
+  right:-60px;
   top:0px;
   content:'';
   border-top: 50px solid #fff;
-  border-right: 50px solid transparent;
+  border-right: 60px solid transparent;
 }
 .navbar {
   background-color: #fff;
