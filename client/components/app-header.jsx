@@ -1,11 +1,4 @@
 AppHeader = React.createClass({
-  navigationItems() {
-    if ( !Meteor.loggingIn() && Meteor.user() ) {
-      return <AuthenticatedNavigation />;
-    } else {
-      return <PublicNavigation />;
-    }
-  },
   render() {
     return (
       <nav className="navbar navbar-default navbar-fixed">
@@ -24,7 +17,7 @@ AppHeader = React.createClass({
             <ul className="nav navbar-nav">
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              {this.navigationItems()}
+              <li><a href="/login">Login</a></li>
             </ul>
           </div>
         </div>

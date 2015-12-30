@@ -27,6 +27,6 @@ accounts-password
 npm-container
 cfs:standard-packages
 cfs:filesystem
-reactrouter:react-router
-reactrouter:react-router-ssr
 themeteorchef:commonmark
+kadira:flow-router-ssr
+kadira:react-layout

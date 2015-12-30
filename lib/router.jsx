@@ -1,12 +1,13 @@
-const {Route} = ReactRouter;
+FlowRouter.route('/', {
+  action(params) {
+    const containerElement = document.getElementById("react-root");
+    ReactLayout.render( App );
+  }
+});
 
-AppRoutes = (
-  <Route path="/" component={App}>
-    <Route path="/" component={HomePage} />
-    <Route path="login" component={LoginPage} />
-    <Route path="*" component={NotFoundPage} />
-    {/* ... */}
-  </Route>
-);
-
-ReactRouterSSR.Run(AppRoutes);
+FlowRouter.route('/login', {
+  name: "login",
+  action() {
+    ReactLayout.render( App, { yield: <Login /> });
+  }
+});
