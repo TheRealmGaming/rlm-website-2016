@@ -1,4 +1,4 @@
-Login = React.createClass({
+Logout = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData() {
     return {
