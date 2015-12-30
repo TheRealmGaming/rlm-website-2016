@@ -8,15 +8,15 @@ Login = React.createClass({
   render() {
     return (
       <div className="row">
-        <div className="col-xs-12 col-sm-6 col-md-4">
-          <h4 className="page-header">Login</h4>
+        <div className="login-area">
+          <h2 className="page-header">Login</h2>
           <form id="login" className="login" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="emailAddress">Email Address</label>
               <input type="email" name="emailAddress" className="form-control" placeholder="Email Address" />
             </div>
             <div className="form-group">
-              <label htmlFor="password"><span className="pull-left">Password</span> <a className="pull-right" href="/recover-password">Forgot Password?</a></label>
+              <label htmlFor="password"><span className="pull-left">Password</span> <a className="pull-right" href="/recover-password"> Forgot Password?</a></label>
               <input type="password" name="password" className="form-control" placeholder="Password" />
             </div>
             <div className="form-group">

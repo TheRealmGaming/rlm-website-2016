@@ -28,5 +28,5 @@ npm-container
 cfs:standard-packages
 cfs:filesystem
 themeteorchef:commonmark
-kadira:flow-router-ssr
 kadira:react-layout
+kadira:flow-router

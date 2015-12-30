@@ -8,6 +8,13 @@ FlowRouter.route('/', {
 FlowRouter.route('/login', {
   name: "login",
   action() {
-    ReactLayout.render( App, { yield: <Login /> });
+    ReactLayout.render( App, { content: <Login /> });
+  }
+});
+
+FlowRouter.route('/forums', {
+  name: "forums",
+  action() {
+    ReactLayout.render( App, { content: <Forums /> });
   }
 });

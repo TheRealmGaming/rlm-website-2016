@@ -22,10 +22,10 @@ Forums = React.createClass({
     });
   },
 
-  
   render: function () {
     return (
       <div>
+        <h2>Forums</h2>
         <ul>
           {this.data.posts.map(function (post) {
             return <li key={post._id}>{post.content}</li>;
