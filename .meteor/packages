@@ -25,8 +25,7 @@ accounts-password
 
 
 npm-container
-kadira:react-layout
-kadira:flow-router
-meteorhacks:fast-render
 cfs:standard-packages
 cfs:filesystem
+reactrouter:react-router
+reactrouter:react-router-ssr
