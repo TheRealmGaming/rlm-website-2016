@@ -6,11 +6,11 @@ Login = React.createClass({
 
     Meteor.loginWithPassword(username, password, function (err) {
       if (err) {
-        console.log("Login failed, please try again");
+        toastr.error(err.reason);
       }
       else
       {
-        console.log("Login successful, welcome back");
+        FlowRouter.go("/");
       }
     });
   },

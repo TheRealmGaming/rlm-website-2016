@@ -13,6 +13,13 @@ FlowRouter.route('/', {
   }
 });
 
+FlowRouter.route('/signup', {
+  name: "Signup",
+  action(params) {
+    renderMainLayoutWith(<Signup />);
+  }
+});
+
 FlowRouter.route('/login', {
   name: "login",
   action() {
