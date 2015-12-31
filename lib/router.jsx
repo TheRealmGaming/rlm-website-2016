@@ -16,5 +16,6 @@ FlowRouter.route('/forums', {
   name: "forums",
   action() {
     ReactLayout.render( App, { content: <Forums /> });
-  }
+  },
+  fastRender: true
 });
