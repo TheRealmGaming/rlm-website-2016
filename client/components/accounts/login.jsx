@@ -1,16 +1,25 @@
 Login = React.createClass({
-  componentDidMount() {
-    Modules.client.login( { form: "#login" } );
-  },
-  handleSubmit( event ) {
+  handleSubmit(event, text) {
     event.preventDefault();
+    var username = event.target.username.value;
+    var password = event.target.password.value;
+
+    Meteor.loginWithPassword(username, password, function (err) {
+      if (err) {
+        console.log("Login failed, please try again");
+      }
+      else
+      {
+        console.log("Login successful, welcome back");
+      }
+    });
   },
   render() {
     var bg = {
       backgroundImage: 'url(http://www.the-realm-gaming.co.uk/wp-content/themes/realm-new//images/dark-souls.jpg)'
     };
     return (
-      <div class="wrapper">
+      <div className="wrapper">
         <div className="image" style={bg}>
         </div>
 
@@ -22,7 +31,7 @@ Login = React.createClass({
                 <form id="login" className="login" onSubmit={this.handleSubmit}>
                   <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input type="email" name="username" className="form-control" placeholder="Username" />
+                    <input type="username" name="username" className="form-control" placeholder="Username" />
                   </div>
                   <div className="form-group">
                     <label htmlFor="password"><span className="pull-left">Password</span>&nbsp;<a className="pull-right" href="/recover-password">Forgot Password?</a></label>

@@ -1,21 +1,29 @@
+function renderMainLayoutWith(component) {
+  ReactLayout.render(MainLayout, {
+    header: <AppHeader />,
+    content: component,
+    footer: <AppFooter />
+  });
+}
+
 FlowRouter.route('/', {
+  name: "Home",
   action(params) {
-    const containerElement = document.getElementById("react-root");
-    ReactLayout.render( App );
+    renderMainLayoutWith(<Home />);
   }
 });
 
 FlowRouter.route('/login', {
   name: "login",
   action() {
-    ReactLayout.render( App, { content: <Login /> });
+    renderMainLayoutWith(<Login />);
   }
 });
 
 FlowRouter.route('/forums', {
   name: "forums",
   action() {
-    ReactLayout.render( App, { content: <Forums /> });
+    renderMainLayoutWith(<Forums />);
   },
   fastRender: true
 });

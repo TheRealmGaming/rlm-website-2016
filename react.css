@@ -57,10 +57,6 @@ body {
 }
 
 /* Page layout */
-
-.wrapper {
-  padding-left: 250px;
-}
 .right-area {
   position: relative;
   width: 100%;
