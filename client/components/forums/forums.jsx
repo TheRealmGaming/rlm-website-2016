@@ -24,7 +24,7 @@ Forums = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="container">
         <h2>Forums</h2>
         <ul>
           {this.data.posts.map(function (post) {
