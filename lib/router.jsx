@@ -27,6 +27,12 @@ FlowRouter.route('/login', {
   }
 });
 
+FlowRouter.route('/edit-profile', {
+  action(params) {
+    renderMainLayoutWith(<EditProfile />);
+  }
+});
+
 FlowRouter.route('/forums', {
   name: "forums",
   action() {
@@ -34,3 +40,10 @@ FlowRouter.route('/forums', {
   },
   fastRender: true
 });
+
+// Not found route
+FlowRouter.notFound = {
+  action: function() {
+    renderMainLayoutWith(<NotFound />);
+  }
+};

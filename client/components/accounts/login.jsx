@@ -25,7 +25,7 @@ Login = React.createClass({
 
         <div className="login-area">
           <div>
-            <div className="center-align container">
+            <div className="text-center container">
               <div className="login-form">
                 <h1 className="login-header">Login</h1>
                 <form id="login" className="login" onSubmit={this.handleSubmit}>

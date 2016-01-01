@@ -13,7 +13,11 @@ Signup = React.createClass({
       Accounts.createUser({
         email: email,
         username: username,
-        password: password
+        password: password,
+        profile: {
+          avatar: "http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=512",
+          bio: "This user doesn't have a biography yet."
+        }
       }, function(err) {
         if (err) {
           toastr.error(err.reason)
@@ -35,7 +39,7 @@ Signup = React.createClass({
 
         <div className="login-area">
           <div>
-            <div className="center-align container">
+            <div className="text-center container">
               <div className="login-form">
                 <h1 className="login-header">Sign Up</h1>
                 <form id="login" className="login" onSubmit={this.handleSubmit}>

@@ -20,9 +20,6 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-.center-align {
-  text-align: center;
-}
 
 /* Menu */
 .navbar-brand {
@@ -164,6 +161,12 @@ body {
 .login-header {
   text-transform: uppercase;
   margin-bottom: 25px;
+}
+
+/* Profiles */
+.profile-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Buttons */
