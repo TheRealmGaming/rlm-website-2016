@@ -30,7 +30,7 @@ Signup = React.createClass({
   },
   render() {
     var bg = {
-      backgroundImage: 'url(http://www.the-realm-gaming.co.uk/wp-content/themes/realm-new//images/dark-souls.jpg)'
+      backgroundImage: 'url(bg.jpg)'
     };
     return (
       <div className="wrapper">
