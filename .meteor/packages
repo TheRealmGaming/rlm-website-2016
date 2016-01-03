@@ -30,3 +30,5 @@ themeteorchef:commonmark
 kadira:react-layout
 kadira:flow-router
 chrismbeckett:toastr
+momentjs:moment
+percolate:synced-cron
