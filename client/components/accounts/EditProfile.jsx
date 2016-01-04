@@ -3,8 +3,13 @@ EditProfile = React.createClass({
 
   getMeteorData() {
     return {
-      currentUser: Meteor.user()
+      currentUser: Meteor.user(),
+      avatarImage: Avatars.findOne({_id: Meteor.user().profile.avatar})
     }
+  },
+
+  getAvatar() {
+
   },
 
   avatarSubmit(event) {
@@ -13,15 +18,11 @@ EditProfile = React.createClass({
       Avatars.insert(file, function (err, fileObj) {
         if (err){
           // error
-          toastr.error(console.error);
+          toastr.error(error.reason);
         } else {
-          var userId = Meteor.userId();
-          var avatarURL = {
-            "profile.avatar": "/cfs/files/avatars/" + fileObj._id
-          };
           // Success!
-          toastr.success('Upload succeeded!');
-        Meteor.users.update(userId, {$set: avatarURL});
+          toastr.success('Upload successful');
+        Meteor.users.update({_id: Meteor.userId() }, {$set: { 'profile.avatar': fileObj._id }});
         };
       });
   	});
@@ -58,7 +59,7 @@ EditProfile = React.createClass({
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 className="modal-title">Change avatar</h4>
               </div>
-              <form onSubmit={this.avatarSubmit}>
+              <form onChange={this.avatarSubmit}>
                 <div className="modal-body top-buffer bot-buffer">
                   <div className="fileinput fileinput-new" data-provides="fileinput">
                     <input type="file" />
