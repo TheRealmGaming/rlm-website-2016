@@ -7,6 +7,26 @@ EditProfile = React.createClass({
     }
   },
 
+  avatarSubmit(event) {
+    event.preventDefault();
+    FS.Utility.eachFile(event, function(file) {
+      Avatars.insert(file, function (err, fileObj) {
+        if (err){
+          // error
+          toastr.error(console.error);
+        } else {
+          var userId = Meteor.userId();
+          var avatarURL = {
+            "profile.avatar": "/cfs/files/avatars/" + fileObj._id
+          };
+          // Success!
+          toastr.success('Upload succeeded!');
+        Meteor.users.update(userId, {$set: avatarURL});
+        };
+      });
+  	});
+  },
+
   render() {
     let avatar;
     let { currentUser } = this.data;
@@ -19,12 +39,36 @@ EditProfile = React.createClass({
         <div className="container profile-container">
           <h1 className="text-center">Edit Profile</h1>
 
-          <div className="row">
-            <div className="col-md-3 col-sm-4 col-xs-12">
+          <div className="row top-buffer">
+            <div className="col-md-3 col-sm-4 col-xs-12 avatarup">
+            <a href="" data-toggle="modal" data-target="#newAvatar">
               { avatar }
+            </a>
             </div>
             <div className="col-md-9 col-sm-8 col-xs-12">
 
+            </div>
+          </div>
+        </div>
+
+        <div className="modal fade" id="newAvatar" role="dialog">
+          <div className="modal-dialog">
+            <div className="modal-content sharp">
+              <div className="modal-header">
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 className="modal-title">Change avatar</h4>
+              </div>
+              <form onSubmit={this.avatarSubmit}>
+                <div className="modal-body top-buffer bot-buffer">
+                  <div className="fileinput fileinput-new" data-provides="fileinput">
+                    <input type="file" />
+                  </div>
+                </div>
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-default sharp" data-dismiss="modal">Close</button>
+                  <input type="submit" className="btn btn-primary sharp" value="Submit" />
+                </div>
+              </form>
             </div>
           </div>
         </div>
