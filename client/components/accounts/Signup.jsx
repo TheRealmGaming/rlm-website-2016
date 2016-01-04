@@ -59,8 +59,8 @@ Signup = React.createClass({
                     <label htmlFor="passwordConfirm"><span className="pull-left">Confirm Password</span></label>
                     <input type="password" name="passwordConfirm" className="form-control" placeholder="Confirm Password" />
                   </div>
-                  <div className="form-group">
-                    <input type="submit" className="btn btn-success" value="Sign Up" />
+                  <div className="form-group top-buffer">
+                    <input type="submit" className="btn btn-primary sharp" value="Sign Up" />
                   </div>
                 </form>
               </div>

@@ -1,5 +1,9 @@
 /* General stuff */
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 html, body {
   height: 100%;
   width: 100%;
@@ -19,6 +23,12 @@ body {
   height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+.top-buffer {
+  margin-top: 25px;
+}
+.bot-buffer {
+  margin-bottom: 25px;
 }
 
 /* Menu */
@@ -173,6 +183,9 @@ body {
 .notfound-header {
   font-size: 3em;
 }
+.form-control {
+  border-radius: 0px;
+}
 
 /* Profiles */
 .profile-container img {
@@ -182,26 +195,27 @@ body {
 
 /* Buttons */
 
-.button-float {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 8000;
+.btn {
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.circle {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 0px solid;
-  background-color: #4d94ff;
-  color: #fff;
-  box-shadow: 0px 2px 4px #777;
-  transition: 0.2s ease;
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
 }
-.circle:hover {
-  box-shadow: 0px 2px 4px #555;
-  background-color: #3485ff;
+.btn-primary {
+  background: #0099cc;
+  color: #ffffff;
 }
-.circle:hover, .circle:visited, .circle:focus, .circle:active {
-  outline: none;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #33a6cc;
+}
+.btn-primary:active, .btn-primary.active {
+  background: #007299;
+  box-shadow: none;
+}
+.btn.sharp {
+  border-radius:0;
 }
