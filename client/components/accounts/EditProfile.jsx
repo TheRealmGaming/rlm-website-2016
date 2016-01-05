@@ -28,13 +28,7 @@ EditProfile = React.createClass({
   	});
   },
 
-  render() {
-    let avatar;
-    let { currentUser } = this.data;
-
-    avatar = (
-      <img src={ currentUser.profile.avatar }></img>
-    )
+  render: function() {
     return (
       <div className="wrapper">
         <div className="container profile-container">
@@ -43,7 +37,7 @@ EditProfile = React.createClass({
           <div className="row top-buffer">
             <div className="col-md-3 col-sm-4 col-xs-12 avatarup">
             <a href="" data-toggle="modal" data-target="#newAvatar">
-              { avatar }
+              <img src={this.data.currentUser.profile.avatar} />
             </a>
             </div>
             <div className="col-md-9 col-sm-8 col-xs-12">
