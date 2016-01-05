@@ -3,13 +3,13 @@ EditProfile = React.createClass({
 
   getMeteorData() {
     return {
-      currentUser: Meteor.user(),
-      avatarImage: Avatars.findOne({_id: Meteor.user().profile.avatar})
+      currentUser: Meteor.user()
     }
   },
 
   avatarSubmit(event) {
     event.preventDefault();
+    var fileId;
     FS.Utility.eachFile(event, function(file) {
       Avatars.insert(file, function (err, fileObj) {
         if (err){
@@ -18,9 +18,12 @@ EditProfile = React.createClass({
         } else {
           // Success!
           toastr.success('Upload successful');
-          // avatarURL
-          var avatarURL = { "profile.avatar": "/cfs/files/avatars/" + fileObj._id };
-          Meteor.users.update({_id: Meteor.userId() }, {$set: avatarURL});
+          Tracker.autorun(function() {
+            var avatarURL = { 'profile.avatar': '/cfs/files/avatars/' + fileObj._id };
+            if (fileObj.isUploaded()) {
+              Meteor.users.update({_id: Meteor.userId() }, {$set: avatarURL});
+            }
+          });
         }
       });
     });
