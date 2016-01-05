@@ -8,10 +8,6 @@ EditProfile = React.createClass({
     }
   },
 
-  getAvatar() {
-
-  },
-
   avatarSubmit(event) {
     event.preventDefault();
     FS.Utility.eachFile(event, function(file) {
@@ -22,10 +18,12 @@ EditProfile = React.createClass({
         } else {
           // Success!
           toastr.success('Upload successful');
-        Meteor.users.update({_id: Meteor.userId() }, {$set: { 'profile.avatar': fileObj._id }});
-        };
+          // avatarURL
+          var avatarURL = { "profile.avatar": "/cfs/files/avatars/" + fileObj._id };
+          Meteor.users.update({_id: Meteor.userId() }, {$set: avatarURL});
+        }
       });
-  	});
+    });
   },
 
   render: function() {
@@ -37,7 +35,7 @@ EditProfile = React.createClass({
           <div className="row top-buffer">
             <div className="col-md-3 col-sm-4 col-xs-12 avatarup">
             <a href="" data-toggle="modal" data-target="#newAvatar">
-              <img src={this.data.currentUser.profile.avatar} />
+              <img src={ this.data.currentUser.profile.avatar } />
             </a>
             </div>
             <div className="col-md-9 col-sm-8 col-xs-12">
