@@ -8,25 +8,7 @@ EditProfile = React.createClass({
   },
 
   avatarSubmit(event) {
-    event.preventDefault();
-    var fileId;
-    FS.Utility.eachFile(event, function(file) {
-      Avatars.insert(file, function (err, fileObj) {
-        if (err){
-          // error
-          toastr.error(error.reason);
-        } else {
-          // Success!
-          toastr.success('Upload successful');
-          Tracker.autorun(function() {
-            var avatarURL = { 'profile.avatar': '/cfs/files/avatars/' + fileObj._id };
-            if (fileObj.isUploaded()) {
-              Meteor.users.update({_id: Meteor.userId() }, {$set: avatarURL});
-            }
-          });
-        }
-      });
-    });
+   event.preventDefault();
   },
 
   render: function() {
