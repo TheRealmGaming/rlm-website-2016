@@ -49,7 +49,9 @@ EditProfile = React.createClass({
             <p>{ this.data.currentUser.emails[0].address }</p>
             </div>
             <div className="col-md-9 col-sm-8 col-xs-12">
-
+              <div className="panel panel-default sharp">
+                <div className="panel-body">Use this page to change your avatar, edit your bio and more.</div>
+              </div>
             </div>
           </div>
         </div>
