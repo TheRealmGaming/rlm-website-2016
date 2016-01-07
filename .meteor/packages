@@ -30,3 +30,6 @@ kadira:flow-router
 chrismbeckett:toastr
 momentjs:moment
 percolate:synced-cron
+edgee:slingshot
+check
+ejson

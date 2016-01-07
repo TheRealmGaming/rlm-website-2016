@@ -23,7 +23,7 @@ Signup = React.createClass({
           toastr.error(err.reason)
         }
         else {
-          FlowRouter.go("/")
+          FlowRouter.go("/edit-profile");
         }
       });
     }

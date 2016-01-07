@@ -183,15 +183,15 @@ a, a:visited, a:focus, a:active, a img, a img:visited, a img:focus, a img:active
   max-width: 100%;
   height: auto;
 }
-.avatarup {
-  background-color: #000;
-  padding: 0px 0px;
+.avatarInput img {
+  transition: 0.3s;
 }
-.avatarup img {
-  transition: 0.2s;
+.avatarInput > input {
+    display: none;
 }
-.avatarup img:hover {
-  opacity: 0.7;
+.avatarInput img:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 /* Buttons */
