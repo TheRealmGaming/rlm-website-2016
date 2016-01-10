@@ -41,7 +41,11 @@ AppHeader = React.createClass({
     }
 
     return (
+<<<<<<< HEAD
       <nav className="navbar navbar-default navbar-fixed-top trans">
+=======
+      <nav className="navbar navbar-default navbar-fixed-top">
+>>>>>>> origin/master
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

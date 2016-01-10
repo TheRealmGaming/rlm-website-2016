@@ -35,7 +35,10 @@ Signup = React.createClass({
           toastr.error(err.reason)
         }
         else {
+<<<<<<< HEAD
           Meteor.call('addRole');
+=======
+>>>>>>> origin/master
           FlowRouter.go("/edit-profile");
         }
       });
@@ -74,7 +77,11 @@ Signup = React.createClass({
                     <input type="password" name="passwordConfirm" className="form-control" placeholder="Confirm Password" />
                   </div>
                   <div className="form-group top-buffer">
+<<<<<<< HEAD
                     <input type="submit" className="btn btn-lg btn-primary sharp" value="Sign Up" />
+=======
+                    <input type="submit" className="btn btn-primary sharp" value="Sign Up" />
+>>>>>>> origin/master
                   </div>
                 </form>
               </div>

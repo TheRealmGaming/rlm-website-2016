@@ -1,0 +1,222 @@
+/* General stuff */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  padding-top: 60px;
+}
+.image {
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  opacity: .75;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.top-buffer {
+  margin-top: 25px;
+}
+.bot-buffer {
+  margin-bottom: 25px;
+}
+a {
+  color: #FF774F;
+}
+a, a:visited, a:focus, a:active, a img, a img:visited, a img:focus, a img:active {
+  outline: none;
+}
+.modal-dialog {
+  margin: 100px auto;
+}
+
+/* Menu */
+.navbar-brand {
+  padding: 0px 15px;
+}
+.navbar-brand img {
+  max-height: 50px;
+}
+.navbar {
+  border-radius: 0px;
+  border: 0px;
+  height: 60px;
+  background: rgba(255,255,255,0.7);
+  padding: 5px;
+  transition: .3s ease;
+}
+.navbar:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* Navbar Transitions */
+.open > .dropdown-menu {
+  animation-name: slidenavAnimation;
+  animation-duration:.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-name: slidenavAnimation;
+  -webkit-animation-duration:.3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+
+  -moz-animation-name: slidenavAnimation;
+  -moz-animation-duration:.3s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease;
+  -moz-animation-fill-mode: forwards;
+}
+@keyframes slidenavAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slidenavAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+}
+
+/* Page layout */
+.right-area {
+  position: relative;
+  width: 100%;
+}
+.content {
+  padding: 20px 60px;
+}
+#header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+#header h1 {
+  margin-bottom: -10px;
+}
+#header h2 {
+  color: #ddd;
+  font-weight: 300;
+}
+#add-post {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+  background-color: #e9e9e9;
+  transition: .5s;
+}
+.login-area, .notfound-area {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.login-area>div {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.notfound-area>div {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  margin-top: 20vh;
+  position: absolute;
+  font-size: 1.2em;
+}
+.login-form::before, .login-form::after, .notfound-form::before, .notfound-form::after {
+  display: table;
+  content: " ";
+}
+.login-form::after, .notfound-form::after {
+  clear: both;
+}
+.login-form, .notfound-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: rgba(245,245,245,.8) !important;
+  padding: 20px 40px;
+}
+.login-header, .notfound-header {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.notfound-header {
+  font-size: 3em;
+}
+.form-control {
+  border-radius: 0px;
+}
+
+/* Profiles */
+.profile-container img {
+  max-width: 100%;
+  height: auto;
+}
+.avatarInput img {
+  transition: 0.3s;
+}
+.avatarInput > input {
+    display: none;
+}
+.avatarInput img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+}
+.btn-primary {
+  background: #0099cc;
+  color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #33a6cc;
+}
+.btn-primary:active, .btn-primary.active {
+  background: #007299;
+  box-shadow: none;
+}
+.sharp {
+  border-radius:0;
+}

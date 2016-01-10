@@ -31,9 +31,12 @@ percolate:synced-cron
 edgee:slingshot
 check
 ejson
+<<<<<<< HEAD
 fourseven:scss
 reywood:bootstrap3-sass
 accounts-google
 accounts-twitter
 email
 alanning:roles
+=======
+>>>>>>> origin/master

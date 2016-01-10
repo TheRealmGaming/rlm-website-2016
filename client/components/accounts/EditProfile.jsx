@@ -3,7 +3,8 @@ EditProfile = React.createClass({
 
   getMeteorData() {
     return {
-      currentUser: Meteor.user()
+      currentUser: Meteor.user(),
+      profile: Profiles.findOne({owner: Meteor.userId()})
     }
   },
 
@@ -14,7 +15,11 @@ EditProfile = React.createClass({
     files = event.target.files[0];
 
     // Set uploader
+<<<<<<< HEAD
     var uploader = new Slingshot.Upload( "uploadToAmazonS3" );
+=======
+    const uploader = new Slingshot.Upload( "uploadToAmazonS3" );
+>>>>>>> origin/master
 
     // Upload files
     uploader.send(files, function( err, downloadUrl) {
@@ -29,6 +34,7 @@ EditProfile = React.createClass({
     });
   },
 
+<<<<<<< HEAD
   renderBio() {
     bio = parseMarkdown( this.data.currentUser.profile.bio );
 
@@ -48,9 +54,13 @@ EditProfile = React.createClass({
     var buttonStyle = {
       marginTop: '15px'
     }
+=======
+  render: function() {
+>>>>>>> origin/master
     return (
       <div className="profile-wrapper">
         <div className="container profile-container">
+<<<<<<< HEAD
           <div className="row">
             <div className="col-md-9 col-xs-6 col-sm-6">
               <h1>Edit Profile</h1>
@@ -59,10 +69,15 @@ EditProfile = React.createClass({
               <a href={ ownProfile } style={ buttonStyle } className="btn btn-primary sharp">View your profile</a>
             </div>
           </div>
+=======
+          <h1 className="text-center">Edit Profile</h1>
+
+>>>>>>> origin/master
           <div className="row top-buffer">
             <div className="col-md-3 col-sm-4 col-xs-12">
               <div className="avatarInput">
                 <label htmlFor="file-input">
+<<<<<<< HEAD
                   <img className="trans" src={ this.data.currentUser.profile.avatar } />
                 </label>
 
@@ -70,13 +85,25 @@ EditProfile = React.createClass({
               </div>
             <h2>{ this.data.currentUser.username }</h2>
             { this.renderBio() }
+=======
+                  <img src={ this.data.currentUser.profile.avatar } />
+                </label>
+
+                <input id="file-input" type="file" onChange={this.avatarSubmit} />
+              </div>
+            <h2>{ this.data.currentUser.username }</h2>
+            <p>{ this.data.currentUser.emails[0].address }</p>
+>>>>>>> origin/master
             </div>
             <div className="col-md-9 col-sm-8 col-xs-12">
               <div className="panel panel-default sharp">
                 <div className="panel-body">Use this page to change your avatar, edit your bio and more.</div>
               </div>
+<<<<<<< HEAD
               <Bio />
               <Cover />
+=======
+>>>>>>> origin/master
             </div>
           </div>
         </div>
