@@ -1,0 +1,21 @@
+.btn {
+  padding: 14px 24px;
+  transition: 0.3s;
+  border: 0 none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+}
+.btn-primary {
+  background: $brand-primary;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: $link-hover-color;
+}
+.btn-primary:active, .btn-primary.active {
+  background: $link-hover-color;
+  box-shadow: none;
+}

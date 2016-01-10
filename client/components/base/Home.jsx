@@ -14,20 +14,22 @@ Home = React.createClass({
 
     if (currentUser) {
       homePage = (
-        <div className="wrapper">
-
+        <div className="home-page">
+          <p><a href="/profile/Korus/">Korus Profile</a></p>
         </div>
       )
     } else {
       homePage = (
-        <div className="wrapper">
-          
+        <div className="home-page">
+
         </div>
       )
     }
 
     return (
-      <div></div>
+      <div className="container">
+        { homePage }
+      </div>
     )
   }
 });

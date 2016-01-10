@@ -41,8 +41,8 @@ AppHeader = React.createClass({
     }
 
     return (
-      <div className="container">
-        <nav className="navbar navbar-default">
+      <nav className="navbar navbar-default navbar-fixed-top trans">
+        <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span className="sr-only">Toggle navigation</span>
@@ -50,7 +50,7 @@ AppHeader = React.createClass({
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="/"><img src="http://www.the-realm-gaming.co.uk/wp-content/uploads/2015/10/realm-final-blue-md.png" /></a>
+            <a className="navbar-brand" href="/"><img src="realm-final-blue-md.png" /></a>
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -59,8 +59,8 @@ AppHeader = React.createClass({
             </ul>
             { loginButton }
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     );
   }
 });

@@ -1,10 +1,21 @@
 Signup = React.createClass({
   handleSubmit(event, text) {
     event.preventDefault();
-    var email = event.target.email.value;
-    var username = event.target.username.value;
-    var password = event.target.password.value;
-    var passwordConfirm = event.target.passwordConfirm.value;
+
+    var coverArray = [
+      'http://smashgn.de/images/slider/image_1920x750.jpg',
+      'http://madewith.unity.com/sites/default/files/game-developer/header-image/typoman.jpg',
+      'http://madewith.unity.com/sites/default/files/game/header-image/desktop/manifoldgarden_game_banner_1.png',
+      'http://madewith.unity.com/sites/default/files/game-developer/header-image/header_36.jpg',
+      'http://meadowhillinteractive.com/georgeng/wp-content/uploads/2014/03/ConceptArt02.jpg',
+      'https://cdn0.artstation.com/p/assets/images/images/000/560/532/large/tommy-scott-home-is-where-the-swamp-is-fb.jpg?1426787043'
+    ];
+
+    email = event.target.email.value;
+    username = event.target.username.value;
+    password = event.target.password.value,
+    passwordConfirm = event.target.passwordConfirm.value;
+    cover = coverArray[Math.floor(Math.random() * coverArray.length)];
 
     if (password != passwordConfirm) {
       toastr.error("Passwords do not match")
@@ -16,24 +27,27 @@ Signup = React.createClass({
         password: password,
         profile: {
           avatar: "http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=512",
-          bio: "This user doesn't have a biography yet."
+          bio: "This user doesn't have a biography yet.",
+          cover: cover
         }
       }, function(err) {
         if (err) {
           toastr.error(err.reason)
         }
         else {
-          FlowRouter.go("/")
+          Meteor.call('addRole');
+          FlowRouter.go("/edit-profile");
         }
       });
     }
   },
+
   render() {
     var bg = {
       backgroundImage: 'url(bg.jpg)'
     };
     return (
-      <div className="wrapper">
+      <div className="signup">
         <div className="image" style={bg}>
         </div>
 
@@ -59,8 +73,8 @@ Signup = React.createClass({
                     <label htmlFor="passwordConfirm"><span className="pull-left">Confirm Password</span></label>
                     <input type="password" name="passwordConfirm" className="form-control" placeholder="Confirm Password" />
                   </div>
-                  <div className="form-group">
-                    <input type="submit" className="btn btn-success" value="Sign Up" />
+                  <div className="form-group top-buffer">
+                    <input type="submit" className="btn btn-lg btn-primary sharp" value="Sign Up" />
                   </div>
                 </form>
               </div>

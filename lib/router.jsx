@@ -30,7 +30,19 @@ FlowRouter.route('/login', {
 FlowRouter.route('/edit-profile', {
   action(params) {
     renderMainLayoutWith(<EditProfile />);
-  }
+  },
+  fastRender: true
+});
+
+FlowRouter.route('/profile/:username', {
+  name: 'publicProfile',
+  subscriptions: function(params) {
+    this.register('usernames', Meteor.subscribe('usernames', params.username));
+  },
+  action: function(params) {
+    renderMainLayoutWith(<Profile username={params.username} />);
+  },
+  fastRender: true
 });
 
 FlowRouter.route('/forums', {

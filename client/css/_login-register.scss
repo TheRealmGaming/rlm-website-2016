@@ -1,0 +1,45 @@
+/* Login and Register */
+.login-area, .notfound-area {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.login-area>div {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.notfound-area>div {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  margin-top: 20vh;
+  position: absolute;
+  font-size: 1.2em;
+}
+.login-form::before, .login-form::after, .notfound-form::before, .notfound-form::after {
+  display: table;
+  content: " ";
+}
+.login-form::after, .notfound-form::after {
+  clear: both;
+}
+.login-form, .notfound-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: $clear-bg;
+  padding: 20px 40px;
+}
+.login-header, .notfound-header {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.notfound-header {
+  font-size: 3em;
+}
+.form-control {
+  border-radius: 0px;
+}
