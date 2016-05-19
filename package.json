@@ -1,0 +1,28 @@
+{
+  "name": "TheRealmGaming",
+  "version": "0.2.1-beta",
+  "description": "The Realm Gaming Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRealmGaming/rlm-website-2016.git"
+  },
+  "keywords": [],
+  "author": "Korus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRealmGaming/rlm-website-2016/issues"
+  },
+  "homepage": "https://github.com/TheRealmGaming/rlm-website-2016#readme",
+  "dependencies": {
+    "load-script": "^1.0.0",
+    "prerender-node": "^2.2.1",
+    "react": "^15.0.1",
+    "react-addons-pure-render-mixin": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-mounter": "^1.2.0"
+  }
+}

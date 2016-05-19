@@ -1,5 +1,12 @@
-$font-family-sans-serif: 'Lato', sans-serif;
-$clear-bg: rgba(245,245,245,.8);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
+$font-family-sans-serif: 'Roboto', sans-serif;
+$body-bg: #232930;
+$text-color: #f1f1f1;
+$panel-bg: #363e44;
+$panel-default-border: #2e353e;
+$brand-primary: #00A8E8;
+$dark-brand: darken(#00A8E8, 7.5%); /* #0198E1 */
+$table-border-color: #363e44;
 
 @import '{reywood:bootstrap3-sass}/bootstrap';
 @import 'client/css/buttons';
@@ -9,3 +16,6 @@ $clear-bg: rgba(245,245,245,.8);
 @import 'client/css/transitions';
 @import 'client/css/menu';
 @import 'client/css/global';
+@import 'client/css/loader';
+@import 'client/css/forums';
+@import 'client/css/dashboard';

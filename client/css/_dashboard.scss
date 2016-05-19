@@ -1,0 +1,94 @@
+.dashboard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.left-nav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: $panel-bg;
+  text-transform: uppercase;
+  a {
+    color: #fff;
+  }
+  .dash-home {
+    padding: 20px;
+  }
+  .dash-home img {
+    max-width: 100%;
+    height: auto;
+    -webkit-filter: drop-shadow(0px 0px 5px #000);
+    filter: drop-shadow(0px 0px 5px #000);
+  }
+  .dash-menu {
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 0px;
+    text-align: center;
+    list-style-type: none;
+  }
+  .dash-menu li {
+    padding: 20px 0px;
+    transition: .2s ease;
+  }
+  .dash-menu li:hover {
+    background-color: rgba(35, 41, 48, 0.5);
+  }
+  .dash-menu a {
+    width: 100%;
+    height: 100%;
+  }
+  .dash-menu a:hover {
+    text-decoration: none;
+  }
+}
+.right-content-area {
+  width: 100%;
+  padding-left: 250px;
+  padding-top: 25px;
+  .cut-out:after {
+    right: 15px;
+    top: 25px;
+  }
+}
+.card {
+  background-color: $panel-bg;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .right-content-area {
+    padding-left: 175px;
+    .cut-out:after {
+      top: 0px;
+    }
+  }
+  .left-nav {
+    width: 175px;
+  }
+}
+.categories {
+  margin-top: 40px;
+}
+.deleteCat, .deleteGame {
+  position: absolute;
+  right: 10px;
+}
+.userslist {
+  margin-top: 40px;
+}
+.green {
+  color: $brand-success;
+}
+.red {
+  color: $brand-danger;
+}
+.blue {
+  color: $brand-primary;
+}

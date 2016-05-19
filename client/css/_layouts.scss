@@ -17,3 +17,23 @@
     font-weight: 300;
   }
 }
+.home-center-area {
+  margin: 3rem auto;
+}
+.margin-right {
+  margin-right: 20px;
+}
+.social-accounts {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+  left: 0px;
+}
+.social-accounts a {
+  font-size: 20px;
+  color: #00A8E8;
+}
+.social-accounts a:hover {
+  color: darken(#00A8E8, 7.5%);
+}

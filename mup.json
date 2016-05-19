@@ -1,0 +1,29 @@
+{
+  "servers": [
+    {
+      "host": "185.14.186.180",
+      "username": "root",
+      "password": "TheRealm2015",
+      "env": {}
+    }
+  ],
+
+  "nodeVersion": "0.10.43",
+
+  "setupMongo": false,
+
+  "appName": "realm",
+
+  "app": ".",
+
+  "env": {
+    "PORT": 80,
+    "ROOT_URL": "http://www.the-realm-gaming.co.uk",
+    "MAIL_URL": "smtp://postmaster%40mg.the-realm-gaming.co.uk:0462d0de736ff3c030e1ec4302aa3641@smtp.mailgun.org:587",
+    "MONGO_URL": "mongodb://31.220.4.158:27017/"
+  },
+
+  "deployCheckWaitTime": 150,
+
+  "enableUploadProgressBar": true
+}

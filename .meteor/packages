@@ -7,36 +7,33 @@
 meteor-base             # Packages every Meteor app needs to have
 mobile-experience       # Packages for a great mobile UX
 mongo                   # The database Meteor supports right now
-blaze-html-templates    # Compile .html files into Meteor Blaze views
 session                 # Client-side reactive dictionary for your app
-jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
 
-standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-react
-fortawesome:fontawesome
 accounts-password
 
 
 npm-container
 themeteorchef:commonmark
-kadira:react-layout
-kadira:flow-router
-chrismbeckett:toastr
 momentjs:moment
 percolate:synced-cron
 edgee:slingshot
 check
 ejson
-<<<<<<< HEAD
 fourseven:scss
 reywood:bootstrap3-sass
-accounts-google
-accounts-twitter
 email
 alanning:roles
-=======
->>>>>>> origin/master
+kadira:dochead
+themeteorchef:bert
+fortawesome:fontawesome
+standard-minifier-css
+standard-minifier-js
+react-meteor-data
+aldeed:collection2
+okgrow:analytics
+kadira:flow-router-ssr
+meteorhacks:kadira

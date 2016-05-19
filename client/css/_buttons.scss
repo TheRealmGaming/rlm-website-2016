@@ -5,6 +5,7 @@
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
+  position: relative;
 }
 .btn:focus, .btn:active:focus, .btn.active:focus {
   outline: 0 none;
@@ -18,4 +19,26 @@
 .btn-primary:active, .btn-primary.active {
   background: $link-hover-color;
   box-shadow: none;
+}
+.cut-out:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 24px solid #232930;
+  border-left: 24px solid transparent;
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+  top: 0;
+}
+.cut-out-light:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 24px solid #363e44;
+  border-left: 24px solid transparent;
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+  top: 0;
 }

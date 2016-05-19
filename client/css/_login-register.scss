@@ -11,12 +11,18 @@
   width: 100%;
   height: 100%;
   vertical-align: middle;
+  padding-top: 50px;
+}
+@media (max-width: 768px) {
+  .login-area>div {
+    padding-top: 0px;
+  }
 }
 .notfound-area>div {
   display: table-cell;
   width: 100%;
   height: 100%;
-  margin-top: 20vh;
+  margin-top: 40vh;
   position: absolute;
   font-size: 1.2em;
 }
@@ -30,12 +36,20 @@
 .login-form, .notfound-form {
   max-width: 500px;
   margin: 3rem auto;
-  background: $clear-bg;
-  padding: 20px 40px;
+  padding: 0px 40px;
+}
+.login-form .btn, .notfound-form .btn {
+  color: #fff;
+}
+.login-form input {
+  color: #555;
 }
 .login-header, .notfound-header {
   text-transform: uppercase;
   margin-bottom: 25px;
+}
+.login-form .form-group {
+  margin: 25px 0px;
 }
 .notfound-header {
   font-size: 3em;
