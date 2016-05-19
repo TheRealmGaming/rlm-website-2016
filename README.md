@@ -11,7 +11,7 @@ Clone this repo (will take some time) into a directory.
 
 To run it, go to your terminal or command prompt:
 
-`cd <directory-you-created>
-meteor`
+`cd <directory-you-created>`
+`meteor`
 
 Then access the app in your browser at localhost:3000
